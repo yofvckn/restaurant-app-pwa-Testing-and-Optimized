@@ -1,0 +1,73 @@
+@media screen and (max-width: 788px) {
+  .row {
+    margin: 32px auto auto;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+    column-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .row {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+    column-gap: 10px;
+  }
+}
+
+/*Mobile Phone*/
+@media screen and (max-width: 599px) {
+  html {
+    font-size: 55%;
+  }
+  #hamburger-menu {
+    display: block;
+    padding: 11px;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+  }
+  .navbar .navbar-menu button:focus {
+    outline: 0.1px solid var(--bg);
+    outline-offset: 0.1px;
+  }
+  .navbar .navbar-nav {
+    display: grid;
+    grid-template-rows: 60px 40px 40px 40px;
+    justify-items: center;
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    background-color: rgba(3, 1, 1, 0.8);
+    width: 250px;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    left: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--primary);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.6;
+    font-size: 2.5em;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+  .logo-top {
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 44px;
+  }
+}
